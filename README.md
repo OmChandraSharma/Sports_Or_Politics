@@ -179,5 +179,29 @@ N-grams achieved the best performance due to contextual representation.
 - Accuracy: **96.59%**
 
 ---
+# ▶ How to Run the Project
+Follow the steps below to execute the complete project pipeline.
+
+## Step 1: Generate the Dataset
+First, run the dataset generation script:
+```bash
+python Generate_Dataset.py
+```
+This script will crawl Wikipedia, apply strict title-based filtering, extract relevant sentences, and generate the dataset file (dataset_title_filtered.csv). Ensure the dataset file is successfully created before proceeding.
+
+## Step 2: Run the Classifier
+
+After the dataset has been generated, execute:
+```bash
+python classifier.py
+```
+
+This script will train the best-performing model (if not already saved), load the trained model using joblib, and allow real-time classification of user input text.
+
+You can enter any sentence, and the model will classify it as:
+
+SPORTS
+or
+POLITICS
 
 
